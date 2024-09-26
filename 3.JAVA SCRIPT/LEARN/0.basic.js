@@ -1,0 +1,16 @@
+//alert("hi");
+console.log("WELCOME :)");
+name = "RISHI MITTAL";
+console.log(name);
+age = 20;
+console.log(age);
+x = 55.24;
+console.log(x);
+y = null;
+console.log(y);
+z = undefined;
+console.log(z);
+hi = true;
+console.log(hi);
+h = false;
+console.log(h);

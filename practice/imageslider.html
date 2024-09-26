@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .slider {
+            position: relative;
+            width: 50vw;
+            height: 50vh;
+            overflow: hidden;
+        }
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: left 0.5s ease-in-out;
+        }
+        .slider img.active {
+            left: 0;
+        }
+        .slider img.previous {
+            left: -100%;
+        }
+        button {
+            font-size: 25px;
+            margin: 15px;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+        }
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="left">&#60;</button>
+    <div class="slider">
+        <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="image1" class="active">
+        <img src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg" alt="image2">
+        <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="image3">
+        <img src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt="image4">
+        <img src="https://tinypng.com/images/social/website.jpg" alt="image5">
+    </div>
+    <button id="right">&#62;</button>
+
+    <script>
+        const images = document.querySelectorAll('.slider img');
+        let currentIndex = 0;
+
+        document.getElementById('right').addEventListener('click', () => {
+            images[currentIndex].classList.remove('active');
+            images[currentIndex].classList.add('previous');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.remove('previous');
+            images[currentIndex].classList.add('active');
+        });
+
+        document.getElementById('left').addEventListener('click', () => {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            images[currentIndex].classList.add('active');
+        });
+    </script>
+</body>
+</html>

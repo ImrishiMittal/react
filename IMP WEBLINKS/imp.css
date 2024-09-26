@@ -1,0 +1,59 @@
+body {
+   background: repeating-radial-gradient(circle,red,yellow);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(233, 238, 234);
+    color: rgb(14, 11, 20);
+    margin-bottom: 30px;
+}
+
+ol {
+    list-style-type:none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to right, rgb(236, 22, 22), rgb(0, 17, 17));
+    border: 2px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    /* transition: background 0.3s ease; */
+}
+
+button:hover {
+    background-image: linear-gradient(to right, rgb(0, 17, 17), rgb(236, 22, 22));
+}
+
+.fa-book, .fa-train, .fa-youtube, .fa-code, .fa-github {
+    margin-left: 10px;
+    color: rgb(255, 215, 0);
+}
+/* 
+body::before {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80');
+    position: absolute;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: -1;
+} */

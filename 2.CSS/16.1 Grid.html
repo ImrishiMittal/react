@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+      .container{
+        display: grid;
+        border: 2px solid;
+        height: 80vh;
+        width: 100vw;
+        /* grid-template-columns: [pehla]120px[doosra]100px[teeshra]110px; */
+        /* grid-template-rows: 100px 80px 150px; */
+        /* grid-template-columns: repeat(4,minmax(100px,1fr)); */
+         /* justify-content: center; */
+         /* justify-content: baseline; */
+         /* align-items: center; */
+      }
+      .item{
+        border: 2px solid;
+        height: 55px;
+        width: 650px;
+      }
+      .item1{
+        background-color: rgb(255, 0, 0);
+        /* grid-row: 1/2; */
+      }
+      .item4{
+        background-color: chartreuse;
+        /* grid-row: 1/2; */
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="item item1">1</div>
+         <div class="item">2</div>
+         <div class="item">3</div>
+         <div class="item item4">4</div>
+         <div class="item">5</div>
+    </div>
+</body>
+</html>

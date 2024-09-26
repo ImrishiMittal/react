@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+         .container{
+             border: 3px solid orange;
+             display: grid;
+             grid-template-areas: nav nav nav
+             mid mid mid
+             footer footer footer;
+         }
+         .class{
+            border: 2px solid;
+            height: 100px;
+            width: 80vw;
+         }
+         .class-1{
+            grid-area: nav;
+            background-color: rgb(245, 13, 13);
+         }
+         .class-2{
+            /* grid-area: footer; */
+            /* background-color: greenyellow; */
+         }
+         .class-3{
+            grid-area: mid;
+            background-color: deepskyblue;
+         }
+         .class-4{
+            /* grid-area: nav; */
+            /* background-color: olive; */
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="class class-1">1</div>
+        <div class="class class-2">2</div>
+        <div class="class class-3">3</div>
+        <div class="class class-4">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<style>
+    *{
+        margin: 7px;
+    }
+    .SUBMITT{
+        border-radius: 5px;
+        background-color: #2d0fee;
+        color: white;
+        cursor: pointer;
+    }
+    
+</style>
+
+<body>
+    <script src="form.js"></script>
+    <h1 style="color: #eee60f;">PRACTICE FORM</h1>
+    <form class="FORM" action="post">
+        <div class="NAME">
+            <label for="username">ENTER YOUR USERNAME -</label> 
+            <input type="text" id="username" name="username"
+            placeholder="ENTER YOUR NAME" pattern="[A-Za-z ]+" required>
+        </div>
+        <div>
+            <label for="PHONE NUMBER -">PHONE NUMBER -</label>
+            <input type="tel" required pattern="[0-9]{10}">
+        </div>
+        
+        <h4 style="color: #2d0fee;">ENTER YOUR GENDER-;</h4>
+        <div class="GENDER">
+            <input type="radio" id="MALE" name="GENDER" value="MALE">
+            <label for="MALE">MALE</label><br>
+            <input type="radio" id="FEMALE" name="GENDER" value="FEMALE">
+            <label for="FEMALE">FEMALE</label>
+        </div>
+       
+        <h4 style="color: #2d0fee;">WANT TO SUBSCRIBE?</h4>
+        <div class="Subscribe">
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+        <br>
+        <div class="COMMENT">
+            <label for="comment"><h4 style="color: #2d0fee;">ENTER YOUR COMMENT</h4></label>
+            <br>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <h4 style="color: #2d0fee;">CHOOSE YOUR FAVROITE CRICKETER-;</h4>
+        <div class="OPTIONS">
+            <select name="FAVROITE CRICKETER">
+                <option value="VIRAT">VIRAT</option>
+                <option value="ABD">ABD</option>
+                <option value="GAYLE">GAYLE</option>
+                <option value="SIRAJ">SIRAJ</option>
+            </select>
+        </div>
+        <br>
+        <div class="RATTING">
+            <label for="ratting">PLEASE RATE OUR SERVICE</label>
+            <br>
+            <input type="range" name="ratting" id="ratting">
+        </div>
+        <div class="SUBMIT">
+            <button type="" class="SUBMITT">SUBMIT</button>
+        </div>
+    </form>
+</body>
+
+</html>

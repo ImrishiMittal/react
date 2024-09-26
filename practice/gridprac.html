@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .bdabba {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px; 
+        }
+        .dabba {
+            height: 200px; 
+            width: 100%; /* Full width of the grid cell */
+            border: 2px solid;
+            margin: 2px;
+            overflow: hidden; /* Hide any overflow content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dabba img {
+            max-width: 100%; /* Ensure image doesn't exceed container width */
+            max-height: 100%; /* Ensure image doesn't exceed container height */
+            object-fit: cover;
+        }
+</style>
+<body>
+    <div class="bdabba">
+        <div class="dabba"><img src="https://miro.medium.com/v2/resize:fit:640/1*b0yJXvlG5Phoa6NBiOaC5g.jpeg" alt=""></div>
+        <div class="dabba"><img src="" alt=""></div>
+        <div class="dabba"><img src="" alt=""></div>
+        <div class="dabba">4</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+        <div class="dabba">5</div>
+    </div>
+</body>
+</html>

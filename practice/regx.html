@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .perror{
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <form action="" onsubmit="return validation()">
+        <div>
+            <label for="pass">PASSWORD-;</label>
+            <input type="password" name="pass" id="pass"  placeholder="ENTER YOUR PASSWORD"><span class="perror"></span>
+        </div>
+        <div>
+            <label for="PHONE">PHONE NUMBER</label>
+            <input type="tel" name="PHONE" id="PHONE"  placeholder="PHONE">
+        </div>
+        <div>
+            <label for="dob">DATE OF BIRTH</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        function validation(){
+            let pass = document.getElementById("pass").value;
+            let phone = document.getElementById("PHONE").value;
+            let date = document.getElementById("dob").value;
+            if(pass ===""||phone===""||date==="")
+            {
+                alert("ALL FILEDS ARE MANDATORY");
+                return false;
+            }
+
+            let passreg = /^[dw!@#$%^&*]+$/;
+           
+            if(!passreg.test(pass)) {
+        document.querySelector(".perror").innerHTML = "THE PASSWORD SHOULD CONTAIN ALPHABETS, NUMBERS, AND SPECIAL CHARACTERS";
+        return false;
+    }
+            return true;
+        }
+    </script>
+</body>
+</html>

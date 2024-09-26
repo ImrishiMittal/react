@@ -1,0 +1,10 @@
+console.log("THIS IS STRING CODE");
+var a = "rishi";
+var b = "MITTAL";
+console.log(a.charAt(2));
+console.log(a.concat(b));
+console.log(a.length);
+console.log(a.toUpperCase());
+console.log(b.lastIndexOf(5));
+console.log(a.slice(1,3));
+console.log(b.replace("TT",55));

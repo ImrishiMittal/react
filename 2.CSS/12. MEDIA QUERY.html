@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA QUERY</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    :root{
+        --color : rgb(140, 20, 151);
+        --maer : 2px;
+        --pad : 10px;
+        --height : 400px;
+        --width :auto;
+    }
+     h1{
+        text-align: center;
+        text-decoration-line: underline;
+        text-decoration-color: var(--color);
+     }
+     .box{
+        border: 5px solid red;
+        height: var(--height);
+        width: var(--width);
+        padding: var(--pad);
+        margin: var(--maer);
+        flex-direction: row;
+     }
+     .box1{
+        border: 5px solid rgb(25, 0, 255);
+        height: var(--height);
+        width: var(--width);
+        padding: var(--pad);
+        margin: var(--maer);
+        flex-direction: column;
+     }
+     .box2{
+        border: 5px solid rgb(98, 255, 0);
+        height: var(--height);
+        width: var(--width);
+        padding: var(--pad);
+        margin: var(--maer);
+        /*flex-direction: column;*/
+     }
+     @media  screen  and (orientation:portrait) {
+        body{
+            border: 2px solid black;
+        }
+     }
+     @media  only screen and (min-width : 500px) {
+        body{
+            background-color: darksalmon;
+        }
+     }
+</style>
+<body>
+    <h1>MEDIA QUERY</h1>
+    <div class="box">
+        HI I AM BOX
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nisi labore eos a aliquid repellendus veritatis quasi ratione vero nobis! Cum sapiente perferendis repellat similique nemo optio quisquam ipsum blanditiis quaerat beatae necessitatibus asperiores, nam nobis amet mollitia earum modi ducimus expedita deleniti illo reprehenderit fugit quo? Libero, dignissimos quisquam.</p>
+    </div>
+    <div class="box1">
+        2ND BOX
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quas, alias saepe, possimus sit rerum quos delectus temporibus provident, quasi tempora optio? Officia cupiditate assumenda sapiente dolor ipsa reiciendis, veritatis consectetur necessitatibus. Enim, error? Aliquam, dignissimos deleniti voluptatibus fugit nihil harum laboriosam consectetur perferendis odio! Eveniet pariatur non aliquam accusantium!</p></div>
+    <div class="box2">3RD BOX
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis eius obcaecati odit beatae voluptatem totam ipsam rerum recusandae impedit voluptatum. Quidem quae doloremque fugiat voluptates quas quia repellat, maiores illo, tenetur architecto provident quos, sequi quam? Corrupti, nobis! Labore maxime excepturi blanditiis assumenda repellendus ipsum sequi, laudantium dolorem provident veniam!</p>
+    </div>
+</body>
+</html>

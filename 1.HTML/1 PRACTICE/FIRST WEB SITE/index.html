@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<style>
+    * {
+        margin: 7px;
+    }
+    .SUBMITT {
+        border-radius: 5px;
+        background-color: #2d0fee;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h1 style="color: #eee60f;">PRACTICE FORM</h1>
+    <form id="myForm" class="FORM" action="post">
+        <div class="NAME">
+            <label for="username">ENTER YOUR USERNAME -</label> 
+            <input type="text" id="username" name="username" placeholder="ENTER YOUR NAME">
+        </div>
+        
+        <h4 style="color: #2d0fee;">ENTER YOUR GENDER-;</h4>
+        <div class="GENDER">
+            <input type="radio" id="MALE" name="gender" value="MALE">
+            <label for="MALE">MALE</label><br>
+            <input type="radio" id="FEMALE" name="gender" value="FEMALE">
+            <label for="FEMALE">FEMALE</label>
+        </div>
+       
+        <h4 style="color: #2d0fee;">WANT TO SUBSCRIBE?</h4>
+        <div class="Subscribe">
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+        <br>
+        <div class="COMMENT">
+            <label for="comment"><h4 style="color: #2d0fee;">ENTER YOUR COMMENT</h4></label>
+            <br>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <h4 style="color: #2d0fee;">CHOOSE YOUR FAVORITE CRICKETER-;</h4>
+        <div class="OPTIONS">
+            <select name="favorite_cricketer">
+                <option value="VIRAT">VIRAT</option>
+                <option value="ABD">ABD</option>
+                <option value="GAYLE">GAYLE</option>
+                <option value="SIRAJ">SIRAJ</option>
+            </select>
+        </div>
+        <br>
+        <div class="RATING">
+            <label for="rating">PLEASE RATE OUR SERVICE</label>
+            <br>
+            <input type="range" name="rating" id="rating">
+        </div>
+        <div class="SUBMIT">
+            <button class="SUBMITT">SUBMIT</button>
+        </div>
+    </form>
+
+    <script>
+        alert("WELCOME");
+        let form = document.getElementById("myForm");
+
+        form.addEventListener("submit", function(event) {
+            let username = document.getElementById("username").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            let subscribe = document.getElementById("subscribe").checked;
+            let comment = document.getElementById("comment").value;
+            let rating = document.getElementById("rating").value;
+
+            if (!username || !gender || !subscribe || !comment || !rating) {
+                alert("ALL THE FIELDS ARE MANDATORY");
+               }
+        });
+    </script>
+</body>
+</html>

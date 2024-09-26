@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTORES</title>
+    <style>
+       .box:first-child{
+        background-color: chartreuse;
+       }
+      .box:nth-child(2){
+        background-color: darksalmon;
+      }
+      .box::first-letter{
+        font-size: 70px;
+        color: rgb(215, 26, 26);
+      }
+      .box:nth-last-child(2){
+        background-color: rgb(191, 255, 0);
+      }
+      input ::placeholder{
+        background-color: rgb(73, 231, 20);
+      }
+    </style>
+</head>
+<body>
+    <div class="box first">HI, iuadk OJBXJ uaB  <h3>firsrt child</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, iste at. Quo reprehenderit assumenda fugit?</p>
+    </div>
+    <div class="box sceond">RISHI OUAUDBKUb whbslWK,D 
+        <h3>second child</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, eaque!</p>
+    </div>
+    <div class="box third">MITTAL ugkuhfbkedhc  
+        <h3>third child</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias non minima eos sequi quod.</p>
+    </div>
+    <div class="box fourth">
+        <h3>fourth chlid</h3>HERE.... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, harum!</div>
+        <input type="text" placeholder="ENTER YOUR TEXT">
+</body>
+</html>

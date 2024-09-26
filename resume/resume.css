@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+    justify-content: center; 
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15%; 
+    padding: 0; 
+    margin: 0; 
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+li a {
+    margin-right: 10px;
+ }
+ hr{
+    border: 1px solid;
+ }
+ .address {
+    text-align: center;
+
+}
+
+.address b, .address p {
+    display: inline;
+}

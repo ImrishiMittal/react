@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+   .container{
+    border: 2px solid;
+    height: 50vh;
+    width: 30vw;
+    background-color: blanchedalmond;
+   }
+   .box{
+    border: 2px solid;
+    height: 25vh;
+    width: 25vw;
+    margin: 3px;
+    /* background-color: black; */
+    /* animation: rishi;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.97, 0.99, 0.98, 1.03);
+    animation-delay: 900ms;
+    animation-iteration-count: 2;
+    animation-direction:normal;
+    animation-fill-mode: both; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: rishi 2s ease-in 2s 2 forwards both;
+   }
+   @keyframes rishi{
+    from{
+  background-color: red;
+  transform:scale(.1)
+    }
+    to{
+        background-color: rgb(0, 255, 174);
+   transform: translateX(450px);
+   transform: skew(2deg);
+    }
+   }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">HELLO</div>
+    </div>
+</body>
+</html>

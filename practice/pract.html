@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validtaion</title>
+</head>
+<style>
+    *{
+        margin: 5px;
+    }
+    form{
+        border: 2px dotted;
+        box-shadow: 5px 5px 5px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        border-radius: 10px;
+    }
+    span{
+        color: red;
+        font-weight: bolder;
+    }
+</style>
+<body>
+    <div>
+        <h1>FORM</h1>
+    </div>
+    <div>
+        <form onsubmit="validation()" name="myform">
+            <div>
+                <label for="name">NAME -</label>
+                <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME"><span class="nerror"></span>
+            </div>
+            <div>
+                <label for="PHONE NO ">PHONE NO - </label>
+                <input type="tel" placeholder="PHONE NUMBER" id="PHNO"><span class="perror"></span>
+            </div>
+            <div>
+                <label for="email">E-MAIL -</label>
+                <input type="email" name="email" id="email" placeholder="ENTER YOUR MAIL"><span class="eeror"></span>
+            </div>
+            <div>
+                <label for="GENDER">GENDER -</label>
+                <label for="MALE">MALE</label>
+                <input type="radio" id="MALE" name="GENDER" value="MALE">
+                <label for="FEMALE">FEMALE</label>
+                <input type="radio" id="FEMALE" name="GENDER" value="FEMALE"><span class="genderror"></span>
+            </div>
+            <div>
+                <label for="add">ADDRESS -</label><br>
+                <textarea name="add" id="add" cols="30" rows="10" placeholder="ENTER YOUR ADDRESS....."></textarea><span class="adderror"></span>
+            </div>
+            <div>
+                <label for="PIN-CODE">PIN-CODE</label>
+                <input type="tel" id="PC" placeholder="PIN-CODE"><span class="pinerror"></span>
+            </div>
+            <div>
+                <label for="food">FOOD</label>
+                <select name="food" id="food">
+                    <option value="VEG">VEG</option>
+                <option value="NON-VEG">NON-VEG</option>
+                <option value="VEGAN">VEGAN</option>
+                </select><span class="ferror"></span>
+            </div>
+            <div>
+                <label for="">YOUR PHOTO</label>
+                <input type="file">
+            </div>
+            <div>
+             <input id="check" type="checkbox">I confirm the above details
+            </div>
+            <div>
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function validation(){
+        let radio = document.myform.GENDER;
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById("PHNO").value;
+        let email = document.getElementById("email").value;
+        let add = document.getElementById('add').value;
+        let pin = document.getElementById('PC').value;
+        let food = document.getElementById('food').value;
+        let confirm = document.getElementById('check').checked;
+        if(name ===""||phone ===""||email ===""||add ===""||pin ===""||food ===""){
+            alert("ALL THE FIELDS ARE MADATORY");
+            return false;
+        }
+        if(!confirm){
+            alert("PLESE CONFIRM THE DETAILS");
+            return false;
+        }
+        if (!male && !female) {
+        document.querySelector('.genderror').innerHTML = "SELECT YOUR GENDER";
+        return false;
+    }
+
+return true;
+}
+</script>
+</html>
