@@ -5,68 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    .box {
-        height: 10vh;
-        width: 100%;
-        border: 2px solid;
-    }
-    .but {
-        margin: 15px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .but button {
-        flex: 1 1 30%; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 30% */
-        margin: 5px;
-    }
-</style>
 <body>
-    <div class="cal">
-        <div class="box"></div>
-        <div class="but">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
-            <button id="four">4</button>
-            <button id="five">5</button>
-            <button id="clr">CLEAR</button>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="33cd1454-caae-4e81-b5a5-e312ccc229ed">
+        <div>
+            <label for="name">NAME</label>
+            <input type="text" name="name">
         </div>
-    </div>
-    <script>
-        const boxElement = document.querySelector(".box");
-
-        // Function to update the box content
-        function updateBoxContent(content) {
-            boxElement.textContent = boxElement.textContent + content;
-        }
-
-        // Function to clear the box content
-        function clearBoxContent() {
-            boxElement.textContent = "";
-        }
-
-        // Event listener for button clicks
-        document.querySelectorAll(".but button").forEach(button => {
-            button.addEventListener("click", () => {
-                const value = button.textContent;
-                if (value === "CLEAR") {
-                    clearBoxContent();
-                } else {
-                    updateBoxContent(value);
-                }
-            });
-        });
-
-        // Event listener for keyboard input
-        document.addEventListener("keydown", function(event) {
-            if (event.key >= "1" && event.key <= "5") {
-                updateBoxContent(event.key);
-            } else if (event.key === "Escape") { // Use Escape key to clear
-                clearBoxContent();
-            }
-        });
-    </script>
-
+        <button type="submit">SUBMIT</button>
+    </form>
 </body>
 </html>
+

@@ -3,7 +3,7 @@ ude.addEventListener("click",()=>{
     window.open ("https://www.udemy.com/home/my-courses/learning/", "_blank");
 })
 
-let hot = document.getElementById("HOTSTAR")
+let hot = document.getElementById("JIOHOTSTAR")
 hot.addEventListener("click", ()=>{
     window.open("https://www.hotstar.com/in/home","_blank");
 })
@@ -15,15 +15,15 @@ let utube = document.getElementById("YOUTUBE")
 utube.addEventListener("click", ()=>{
     window.open("https://www.youtube.com/", "_blank");
 })
+let x = document.getElementById("TWITTER")
+x.addEventListener("click", ()=>{
+    window.open("https://x.com/home?lang=en", "_blank");
+})
 let chat = document.getElementById("CHATGPT");
 chat.addEventListener("click", ()=>{
     window.open("https://chat.openai.com/","_blank")
 })
-let jio = document.getElementById("JIOCINEMA");
-jio.addEventListener("click", ()=>{
-    window.open("https://www.jiocinema.com/", "_blank")
-})
-let sony = document.getElementById("SONYLIV")
+let sony = document.getElementById("SONYLIV");
 sony.addEventListener("click", ()=>{
     window.open("https://www.sonyliv.com/","_blank")
 })

@@ -40,7 +40,7 @@ button:hover {
     background-image: linear-gradient(to right, rgb(0, 17, 17), rgb(236, 22, 22));
 }
 
-.fa-book, .fa-train, .fa-youtube, .fa-code, .fa-github {
+.fa-book, .fa-train, .fa-youtube, .fa-code, .fa-github, .fa-x, .fa-tv, .fa-magnifying-glass {
     margin-left: 10px;
     color: rgb(255, 215, 0);
 }

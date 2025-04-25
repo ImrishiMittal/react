@@ -32,8 +32,10 @@
         <h1>FORM</h1>
     </div>
     <div>
-        <form onsubmit="validation()" name="myform">
+        <form onsubmit="validation()" name="myform" action="https://api.web3forms.com/submit" method="post">
             <div>
+                <input type="hidden"
+                name="access_key" value="088283b1-41de-4f60-8e66-a7c564c4fcfe">
                 <label for="name">NAME -</label>
                 <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME"><span class="nerror"></span>
             </div>
