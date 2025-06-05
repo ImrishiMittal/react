@@ -1,0 +1,32 @@
+/* Center the main app */
+.appContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+  }
+  
+  /* Box styling */
+  .todoBox {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  /* Heading styling */
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Optional list item hover effect */
+  .listItem:hover {
+    background-color: #e6f2ff;
+    cursor: pointer;
+  }
+  
